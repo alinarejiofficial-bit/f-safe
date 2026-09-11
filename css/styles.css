@@ -1879,7 +1879,6 @@ section {
   flex-direction: column;
   align-items: center;
   gap: clamp(2.25rem, 4vw, 3.25rem);
-  width: 100%;
 }
 
 .faq-intro {
@@ -2799,7 +2798,7 @@ section {
   }
 
   .container {
-    width: min(100% - 1.5rem, var(--max));
+    width: min(100% - 2rem, var(--max));
   }
 
   .site-header {
@@ -2957,6 +2956,8 @@ section {
 
   .faq-list {
     width: 100%;
+    padding-inline: 0.15rem;
+    box-sizing: border-box;
   }
 
   .faq-item__trigger {
@@ -2995,22 +2996,15 @@ section {
   .cta-band__media::before {
     content: "";
     position: absolute;
-    z-index: 2;
-    left: 0;
-    right: 0;
-    top: 0;
-    height: 0.2rem;
-    background: var(--navy);
-    clip-path: polygon(0 100%, 100% 0, 100% 100%, 0 100%);
-    transform: translateY(calc(14% * 0.48 * 1px));
-    /* solid slanted edge via rotated strip */
-    height: 3px;
-    top: 6.5%;
-    transform: rotate(-6.5deg);
-    transform-origin: left center;
+    z-index: 3;
+    left: -8%;
+    top: 6%;
     width: 120%;
-    left: -2%;
-    clip-path: none;
+    height: 3px;
+    background: var(--navy);
+    transform: rotate(-6.2deg);
+    transform-origin: center;
+    box-shadow: 0 1px 0 rgba(0, 45, 91, 0.25);
   }
 
   .cta-band__media::after {
@@ -3246,7 +3240,26 @@ section {
   }
 
   .cta-band__content {
-    padding-bottom: 9rem;
+    padding: 1.35rem 1.1rem 1.05rem;
+  }
+
+  .cta-band__media {
+    height: clamp(10.5rem, 52vw, 13.5rem);
+  }
+
+  .cta-band__perks li {
+    font-size: 0.62rem;
+  }
+
+  .cta-band__quote {
+    font-size: 0.74rem;
+    max-width: 9.5rem;
+    bottom: 0.85rem;
+    right: 0.85rem;
+  }
+
+  .cta-band__quote::before {
+    height: 2rem;
   }
 
   .page-hero h1 {
