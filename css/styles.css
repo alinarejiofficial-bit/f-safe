@@ -193,9 +193,9 @@ button {
 .logo img {
   display: block;
   width: auto;
-  height: 4.35rem;
-  max-width: min(15.5rem, 52vw);
-  max-height: 4.35rem;
+  height: 4.5rem;
+  max-width: min(16rem, 54vw);
+  max-height: 4.5rem;
   object-fit: contain;
   opacity: 1;
   visibility: visible;
@@ -209,9 +209,9 @@ button {
 }
 
 .footer-brand .logo img {
-  height: 3.5rem;
-  max-height: 3.5rem;
-  max-width: 13rem;
+  height: 4.25rem;
+  max-height: 4.25rem;
+  max-width: 15rem;
   filter: none;
 }
 
@@ -226,9 +226,9 @@ button {
 .preloader__mark img {
   display: block;
   width: auto;
-  height: 4.25rem;
-  max-height: 4.25rem;
-  max-width: min(16rem, 70vw);
+  height: 4.75rem;
+  max-height: 4.75rem;
+  max-width: min(17rem, 72vw);
   object-fit: contain;
 }
 
@@ -2806,9 +2806,9 @@ section {
   }
 
   .logo img {
-    height: 3.55rem;
-    max-height: 3.55rem;
-    max-width: min(13rem, 58vw);
+    height: 3.75rem;
+    max-height: 3.75rem;
+    max-width: min(14rem, 60vw);
   }
 
   .nav-toggle {
@@ -3111,9 +3111,9 @@ section {
 
 @media (max-width: 520px) {
   .logo img {
-    height: 3.15rem;
-    max-height: 3.15rem;
-    max-width: min(12rem, 62vw);
+    height: 3.35rem;
+    max-height: 3.35rem;
+    max-width: min(13rem, 64vw);
   }
 
   .services-pills {
