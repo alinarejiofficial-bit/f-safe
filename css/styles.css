@@ -2877,36 +2877,47 @@ section {
   }
 
   .cta-band__inner {
-    min-height: clamp(28rem, 118vw, 34rem);
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    background: #fff;
   }
 
   .cta-band__media {
-    inset: 0;
+    position: relative;
+    inset: auto;
+    order: 1;
+    width: 100%;
+    height: clamp(12.5rem, 52vw, 16rem);
+    flex-shrink: 0;
+    z-index: 1;
   }
 
   .cta-band__media::after {
     background: linear-gradient(
       180deg,
-      rgba(248, 251, 255, 0.97) 0%,
-      rgba(248, 251, 255, 0.92) 42%,
-      rgba(248, 251, 255, 0.45) 68%,
-      rgba(248, 251, 255, 0.12) 82%,
-      transparent 100%
+      transparent 55%,
+      rgba(255, 255, 255, 0.35) 85%,
+      #fff 100%
     );
   }
 
   .cta-band__media img {
-    object-position: 88% 28%;
+    object-position: 82% 28%;
+    transform: none;
   }
 
   .cta-band__content {
+    position: relative;
+    z-index: 2;
+    order: 2;
     width: 100%;
     align-items: stretch;
     text-align: left;
     gap: 1.1rem;
     min-height: 0;
-    padding: 1.5rem 1.25rem 11.5rem;
-    background: transparent;
+    padding: 1.35rem 1.25rem 1.5rem;
+    background: #fff;
   }
 
   .cta-band__copy {
@@ -3080,11 +3091,15 @@ section {
   }
 
   .cta-band__content {
-    padding: 1.35rem 1.1rem 10.5rem;
+    padding: 1.2rem 1.1rem 1.35rem;
+  }
+
+  .cta-band__media {
+    height: clamp(11.5rem, 56vw, 14.5rem);
   }
 
   .cta-band__media img {
-    object-position: 90% 32%;
+    object-position: 85% 30%;
   }
 
   .cta-band__perks li {
