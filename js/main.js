@@ -128,25 +128,28 @@
 
   // Keep hero background sharp — no parallax/zoom on the image
 
-  // Floating contact FAB
+  // Floating contact FAB — messages button expands social icons upward
   const fab = document.querySelector("[data-fab]");
   const fabToggle = fab?.querySelector(".fab__toggle");
-  fabToggle?.addEventListener("click", () => {
-    const open = fab.classList.toggle("is-open");
+  const fabMenu = fab?.querySelector(".fab__menu");
+
+  const setFabOpen = (open) => {
+    fab.classList.toggle("is-open", open);
     fabToggle.setAttribute("aria-expanded", String(open));
-    fabToggle.setAttribute("aria-label", open ? "Close contact options" : "Open contact options");
+    fabToggle.setAttribute("aria-label", open ? "Close messages" : "Open messages");
+    fabMenu?.setAttribute("aria-hidden", String(!open));
+  };
+
+  fabToggle?.addEventListener("click", () => {
+    setFabOpen(!fab.classList.contains("is-open"));
   });
   document.addEventListener("click", (e) => {
     if (!fab?.classList.contains("is-open")) return;
     if (fab.contains(e.target)) return;
-    fab.classList.remove("is-open");
-    fabToggle?.setAttribute("aria-expanded", "false");
-    fabToggle?.setAttribute("aria-label", "Open contact options");
+    setFabOpen(false);
   });
   document.addEventListener("keydown", (e) => {
     if (e.key !== "Escape" || !fab?.classList.contains("is-open")) return;
-    fab.classList.remove("is-open");
-    fabToggle?.setAttribute("aria-expanded", "false");
-    fabToggle?.setAttribute("aria-label", "Open contact options");
+    setFabOpen(false);
   });
 })();
