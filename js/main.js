@@ -127,4 +127,26 @@
   });
 
   // Keep hero background sharp — no parallax/zoom on the image
+
+  // Floating contact FAB
+  const fab = document.querySelector("[data-fab]");
+  const fabToggle = fab?.querySelector(".fab__toggle");
+  fabToggle?.addEventListener("click", () => {
+    const open = fab.classList.toggle("is-open");
+    fabToggle.setAttribute("aria-expanded", String(open));
+    fabToggle.setAttribute("aria-label", open ? "Close contact options" : "Open contact options");
+  });
+  document.addEventListener("click", (e) => {
+    if (!fab?.classList.contains("is-open")) return;
+    if (fab.contains(e.target)) return;
+    fab.classList.remove("is-open");
+    fabToggle?.setAttribute("aria-expanded", "false");
+    fabToggle?.setAttribute("aria-label", "Open contact options");
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key !== "Escape" || !fab?.classList.contains("is-open")) return;
+    fab.classList.remove("is-open");
+    fabToggle?.setAttribute("aria-expanded", "false");
+    fabToggle?.setAttribute("aria-label", "Open contact options");
+  });
 })();
