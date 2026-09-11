@@ -1480,8 +1480,8 @@ section {
 
 /* --- CTA --- */
 .cta-band {
-  --cta-cut-top: 56%;
-  --cta-cut-bot: 70%;
+  --cta-cut-top: 46%;
+  --cta-cut-bot: 56%;
   --cta-edge-w: 0.28%;
   --cta-edge2-w: 0.55%;
   padding: var(--section-y) 0;
@@ -1501,10 +1501,7 @@ section {
 
 .cta-band__media {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 42%;
+  inset: 0;
   z-index: 0;
   pointer-events: none;
   overflow: hidden;
@@ -1515,11 +1512,11 @@ section {
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    115deg,
-    rgba(0, 45, 91, 0.18) 0%,
-    transparent 38%,
-    transparent 62%,
-    rgba(0, 20, 40, 0.28) 100%
+    100deg,
+    rgba(255, 255, 255, 0.12) 0%,
+    transparent 42%,
+    transparent 70%,
+    rgba(0, 25, 50, 0.22) 100%
   );
   pointer-events: none;
 }
@@ -1528,14 +1525,15 @@ section {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 38% 18%;
-  transform: scale(1.04);
+  object-position: 62% 22%;
+  transform: scale(1.01);
   transition: transform 1.6s var(--ease-out);
-  filter: saturate(1.05) contrast(1.03);
+  filter: none;
+  image-rendering: auto;
 }
 
 .cta-band__inner:hover .cta-band__media img {
-  transform: scale(1.08);
+  transform: scale(1.035);
 }
 
 .cta-band__shade {
@@ -1608,10 +1606,10 @@ section {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  gap: 1.25rem;
+  gap: 1.15rem;
   min-height: inherit;
-  padding: clamp(1.85rem, 3.5vw, 2.75rem) clamp(1.5rem, 3.5vw, 2.75rem);
-  width: min(100%, 52%);
+  padding: clamp(1.85rem, 3.5vw, 2.75rem) clamp(1.5rem, 3.5vw, 2.5rem);
+  width: min(100%, 44%);
 }
 
 .cta-band__copy {
@@ -1714,25 +1712,26 @@ section {
 
 .cta-band__perks {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
   gap: 0;
   list-style: none;
-  margin: 0.5rem 0 0;
+  margin: 0.35rem 0 0;
   padding: 0.85rem 0 0;
   border-top: 1px solid rgba(0, 45, 91, 0.08);
   width: 100%;
-  max-width: 32rem;
+  max-width: 100%;
 }
 
 .cta-band__perks li {
   display: inline-flex;
   align-items: center;
-  gap: 0.55rem;
-  font-size: 0.82rem;
+  gap: 0.45rem;
+  font-size: 0.78rem;
   font-weight: 600;
   color: #5c6b80;
-  padding: 0 1rem;
+  padding: 0 0.75rem;
+  white-space: nowrap;
 }
 
 .cta-band__perks li:first-child {
@@ -1814,12 +1813,12 @@ section {
 }
 
 @keyframes ctaMediaIn {
-  from { transform: scale(1.1); opacity: 0.7; }
-  to { transform: scale(1.04); opacity: 1; }
+  from { transform: scale(1.05); opacity: 0.75; }
+  to { transform: scale(1.01); opacity: 1; }
 }
 
 @keyframes ctaShadeIn {
-  from { clip-path: polygon(0 0, 20% 0, 28% 100%, 0 100%); }
+  from { clip-path: polygon(0 0, 28% 0, 36% 100%, 0 100%); }
   to { clip-path: polygon(0 0, var(--cta-cut-top) 0, var(--cta-cut-bot) 100%, 0 100%); }
 }
 
@@ -2590,7 +2589,7 @@ section {
   }
 
   .cta-band__content {
-    width: min(100%, 54%);
+    width: min(100%, 46%);
   }
 }
 
@@ -2775,7 +2774,7 @@ section {
   }
 
   .cta-band__content {
-    width: min(100%, 58%);
+    width: min(100%, 48%);
   }
 
   .contact-grid {
