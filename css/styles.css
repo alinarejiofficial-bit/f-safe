@@ -1848,7 +1848,7 @@ section {
 .faq-intro {
   position: relative;
   text-align: center;
-  width: min(100%, 38rem);
+  width: min(100%, 48rem);
   margin-inline: auto;
   display: flex;
   flex-direction: column;
@@ -1868,9 +1868,10 @@ section {
 
 .faq-intro .section-lead {
   margin-inline: auto;
-  max-width: 36ch;
+  max-width: none;
+  width: 100%;
   font-size: 1.05rem;
-  line-height: 1.65;
+  line-height: 1.7;
   color: var(--muted);
 }
 
@@ -3092,7 +3093,7 @@ section {
   }
 
   .faq-intro {
-    width: min(100%, 34rem);
+    width: 100%;
     padding-inline: 0.15rem;
   }
 
