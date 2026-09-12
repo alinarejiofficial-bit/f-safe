@@ -1386,7 +1386,8 @@ section {
 .feature-pills {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.45rem;
+  justify-content: flex-start;
+  gap: 0.5rem 0.55rem;
   margin: 1.1rem 0 1.35rem;
 }
 
@@ -2777,6 +2778,9 @@ section {
 
   .service-detail__copy {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .service-detail__copy .section-label {
@@ -2784,9 +2788,22 @@ section {
   }
 
   .service-detail__copy .section-lead,
+  .service-detail__copy .section-title,
+  .service-detail__copy h2 {
+    margin-inline: auto;
+  }
+
+  .service-detail__copy .feature-pills,
   .feature-pills {
+    width: min(100%, 28rem);
     margin-inline: auto;
     justify-content: center;
+    align-content: center;
+  }
+
+  .service-detail__copy .btn {
+    align-self: center;
+    margin-inline: auto;
   }
 
   .gallery-grid {
