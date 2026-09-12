@@ -1617,10 +1617,10 @@ section {
   font-size: clamp(1.65rem, 3.1vw, 2.35rem);
   font-weight: 700;
   letter-spacing: -0.03em;
-  line-height: 1.15;
+  line-height: 1.2;
   margin-bottom: 0.7rem;
   color: var(--navy);
-  text-wrap: balance;
+  text-wrap: pretty;
 }
 
 .cta-band h2 span {
