@@ -1626,6 +1626,7 @@ section {
 .cta-band h2 span {
   display: block;
   color: var(--blue);
+  white-space: nowrap;
 }
 
 .cta-band__lead {
