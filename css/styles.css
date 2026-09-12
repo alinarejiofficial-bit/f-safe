@@ -17,7 +17,7 @@
   --font-script: "Caveat", cursive;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
-  --nav-h: 6rem;
+  --nav-h: 4.75rem;
   --max: 78rem;
   --gutter: clamp(0.85rem, 2vw, 1.25rem);
   --radius: 0.75rem;
@@ -154,7 +154,7 @@ button {
   background: #fff;
   border-bottom: 1px solid transparent;
   transition: box-shadow 0.3s ease, border-color 0.3s ease;
-  padding-block: 0.55rem;
+  padding-block: 0.35rem;
   padding-inline: clamp(0.85rem, 2vw, 1.5rem);
 }
 
@@ -193,9 +193,9 @@ button {
 .logo img {
   display: block;
   width: auto;
-  height: 4.5rem;
-  max-width: min(16rem, 54vw);
-  max-height: 4.5rem;
+  height: 3rem;
+  max-width: min(11.5rem, 46vw);
+  max-height: 3rem;
   object-fit: contain;
   opacity: 1;
   visibility: visible;
@@ -649,26 +649,31 @@ button {
 
 .hero__feature {
   display: flex;
-  align-items: flex-start;
-  gap: 0.65rem;
+  align-items: center;
+  gap: 0.75rem;
   min-width: 0;
   padding: 0.25rem 0.2rem;
 }
 
 .hero__feature-icon {
-  width: 2.15rem;
-  height: 2.15rem;
-  border-radius: 0.55rem;
-  display: grid;
-  place-items: center;
+  width: 2.45rem;
+  height: 2.45rem;
+  border-radius: 0.65rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
   color: var(--blue);
   background: var(--accent-soft);
   flex-shrink: 0;
 }
 
 .hero__feature-icon svg {
-  width: 1.05rem;
-  height: 1.05rem;
+  display: block;
+  width: 1.3rem;
+  height: 1.3rem;
+  margin: 0;
+  overflow: visible;
 }
 
 .hero__feature strong {
@@ -680,7 +685,7 @@ button {
   line-height: 1.2;
 }
 
-.hero__feature span {
+.hero__feature > div span {
   display: block;
   font-size: 0.72rem;
   color: var(--muted);
@@ -980,16 +985,21 @@ section {
   width: 2.35rem;
   height: 2.35rem;
   border-radius: 0.65rem;
-  display: grid;
-  place-items: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
   color: var(--blue);
   background: rgba(30, 111, 232, 0.1);
   flex-shrink: 0;
 }
 
 .about-chip__icon svg {
-  width: 1.15rem;
-  height: 1.15rem;
+  display: block;
+  width: 1.3rem;
+  height: 1.3rem;
+  margin: 0;
+  overflow: visible;
 }
 
 .about-chip strong {
@@ -1001,7 +1011,7 @@ section {
   line-height: 1.2;
 }
 
-.about-chip span {
+.about-chip > div span {
   display: block;
   margin-top: 0.15rem;
   font-size: 0.78rem;
@@ -1171,16 +1181,21 @@ section {
   width: 2.6rem;
   height: 2.6rem;
   border-radius: 50%;
-  display: grid;
-  place-items: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
   background: rgba(30, 111, 232, 0.12);
   color: var(--navy);
   margin-bottom: 0.2rem;
 }
 
 .services-pill__icon svg {
-  width: 1.15rem;
-  height: 1.15rem;
+  display: block;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin: 0;
+  overflow: visible;
 }
 
 .services-pill strong {
@@ -2708,7 +2723,7 @@ section {
 
 @media (max-width: 980px) {
   :root {
-    --nav-h: 5.5rem;
+    --nav-h: 4.4rem;
     --gutter: 1rem;
   }
 
@@ -2914,7 +2929,7 @@ section {
 
 @media (max-width: 760px) {
   :root {
-    --nav-h: 5.1rem;
+    --nav-h: 4.15rem;
     --section-y: clamp(3rem, 10vw, 4rem);
   }
 
@@ -2938,9 +2953,9 @@ section {
   }
 
   .logo img {
-    height: 3.75rem;
-    max-height: 3.75rem;
-    max-width: min(14rem, 60vw);
+    height: 2.65rem;
+    max-height: 2.65rem;
+    max-width: min(10.5rem, 52vw);
   }
 
   .nav-toggle {
@@ -3270,9 +3285,9 @@ section {
 
 @media (max-width: 520px) {
   .logo img {
-    height: 3.35rem;
-    max-height: 3.35rem;
-    max-width: min(13rem, 64vw);
+    height: 2.4rem;
+    max-height: 2.4rem;
+    max-width: min(9.5rem, 58vw);
   }
 
   .services-pills {
