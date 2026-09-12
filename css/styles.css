@@ -2797,12 +2797,31 @@ section {
     margin-inline: auto;
   }
 
+  .hide-mobile {
+    display: none;
+  }
+
   .service-detail__copy .feature-pills,
   .feature-pills {
-    width: min(100%, 28rem);
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: min(100%, 22.5rem);
     margin-inline: auto;
     justify-content: center;
-    align-content: center;
+    justify-items: stretch;
+    gap: 0.5rem;
+  }
+
+  .feature-pills li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.2rem;
+    padding: 0.4rem 0.55rem;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 0.7rem;
+    line-height: 1.2;
   }
 
   .service-detail__copy .btn {
